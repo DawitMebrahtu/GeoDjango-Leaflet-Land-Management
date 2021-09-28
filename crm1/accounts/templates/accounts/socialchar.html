@@ -1,0 +1,95 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"> 
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+ 	<div class="container-fluid">
+ 		
+    </div>
+	</nav>
+
+	<div >
+		
+		<div class="col-12"> 
+			<hr>
+			<h2> Socio-economic Status </h2>
+			<hr>
+		</div>
+		<div>
+			
+			
+			<div class="col-md-10">
+				<p><h4> Economic and social charactratics</h4></p>
+
+				<p>The town serves as regional administration, tourism, trade and service center. The town is one of the major areas in the region attracting new investment. During the five year period between 1998 and 2003 it has attracted many investors and a total of 147 investment licenses were issued.
+
+				The real-estate sector is found to be the leading sector accounting for about 26% of the total number of investment licenses issued.  Social services as well as hotel and tourism sectors are the 2nd and 3rd important sectors.  Sectors like construction, service rendering, agriculture and industry are also important areas for new investments in the town. The major investment opportunities in the town are: development of resort services; agricultural development; manufacturing industries, particularly food, textiles and hides and skins sub-sectors; fruit and vegetable; eco-tourism and the like.</p>
+
+
+				<p><h4> Social and Municipal Services </h4></p>
+
+				<h5>Education</h5>
+
+				<p>There are 26 private kindergartens; 16 private and 19 government primary schools;  three private and six government secondary schools;  two TVETs,  ten private colleges;  four government colleges; three teacher training colleges and  one government university. </p>
+
+
+				<h5>Health</h5>
+
+				<p>In Hawassa town, there are one government hospital; one referral hospital; 12 government health centers, ten private clinics and ten private pharmacies.</p>
+			</div>
+		</div>
+	</div>
+
+
+
+<footer>
+	<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-4">
+						<hr class="light">
+						<h5>About Hawassa</h5>
+						<hr class="light">
+						<p><a href="{% url 'backgroundinfo' %}" class= "nav-link">Background Info</a></p>
+						<p><a href="{% url 'physicalchar' %}" class= "nav-link">Physical Characterstics</a></p>
+						<p><a href="{% url 'socialchar' %}" class="btn disabled">Socio-economic Characterstics</a></p>
+						<p><a href="{% url 'vision' %}" class= "nav-link">Vision</a><br></p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Legal</h5>
+					<hr class="light">
+					<p><a href="{% url 'regulations' %}" class= "nav-link">Laws and Regulations</a></p>
+					<p><a href="{% url 'disclaimer' %}" class= "nav-link">Disclaimer</a></p>
+					
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Policies</h5>
+					<hr class="light">
+					<p><a href="% url 'privacy' %}" class= "nav-link">Privacy Policy</a></p>
+					<p><a href="{% url 'accessibility' %}" class= "nav-link">Accessibility</a></p>
+					
+				</div>
+				<div class="col-12">
+					<hr class="light">
+					<h5>&copy; Hawassa Land Management</h5>
+				</div>
+			</div>
+
+	</div>
+</footer>
+</body>
+</html>

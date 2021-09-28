@@ -1,0 +1,108 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"> 
+
+	
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+ 	<div class="container-fluid">
+ 		<a class="navbar-brand " href="#"><img src="img/hawassalogo.jpg"></a>
+ 		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+ 			<span class="navbar-toggler-icon"></span>
+ 		</button> 
+ 		<div class="collapse navbar-collapse" id="navbarResponsive">
+ 			
+ 		</div>
+    </div>
+	</nav>
+
+	<div >
+		
+		<div class="col-12"> 
+			<hr>
+			<h2> Policies </h2>
+			<hr>
+		</div>
+		<div>
+			
+			
+			<div class="col-md-10">
+			<p>
+				Thank you for visiting the Office of General Services (OGS) website. The OGS website is designed to make it easier and more efficient for individuals and businesses to interact with the agency. OGS recognizes that it is critical for individuals and businesses to be confident that their privacy is protected when they visit the OGS public website.
+
+Consistent with the provisions of the Internet Security and Privacy Act, the Freedom of Information Law, and the Personal Privacy Protection Law, this policy describes OGS privacy practices regarding information collected from users of this website. This policy describes what information is collected and how that information is used. Because this privacy policy only applies to this website, you should examine the privacy policy of any website, including other state agency websites, that you access through this website.
+
+For purposes of this policy, "personal information" means any information concerning a natural person that, because of name, number, symbol, mark, or other identifier, can be used to identify that natural person. OGS does not collect any personal information about you unless you provide that information voluntarily by sending an e-mail or by initiating an online transaction, such as a survey, registration or order form.
+
+ 
+
+Information Collected Automatically When You Visit this Website
+When visiting this website OGS automatically collects and stores the following information about your visit:
+
+The Internet Protocol Address and domain name used, but not the e-mail address. The Internet Protocol Address is a numerical identifier assigned either to your Internet service provider or directly to your computer;
+The type of browser and operating system you used;
+The date and time you visited this site;
+The web pages or services you accessed at this site;
+The website you visited prior to coming to this website; and
+If you downloaded a form, the form that was downloaded.
+None of the foregoing information is deemed to constitute personal information.
+			</p>
+			</div>	
+		</div>
+	</div>
+
+
+
+<footer>
+	<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-4">
+						<hr class="light">
+						<h5>About Hawassa</h5>
+						<hr class="light">
+						<p><a href="{% url 'backgroundinfo' %}" class= "nav-link">Background Info</a></p>
+						<p><a href="{% url 'physicalchar' %}"class= "nav-link">Physical Characterstics</a></p>
+						<p><a href="{% url 'socialchar' %}"class= "nav-link">Socio-economic Characterstics</a></p>
+						<p><a href="{% url 'vision' %}"class= "nav-link">Vision</a><br></p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Legal</h5>
+					<hr class="light">
+					<p><a href="{% url 'regulations' %}" class= "nav-link">Laws and Regulations</a></p>
+					<p><a href="{% url 'disclaimer' %}" class= "nav-link">Disclaimer</a></p>
+					
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Policies</h5>
+					<hr class="light">
+					<p><a href="{% url 'privacy' %}" class="btn disabled nav-link">Privacy Policy</a></p>
+					<p><a href="{% url 'accessibility' %}" class= "nav-link">Accessibility</a></p>
+					
+				</div>
+				<div class="col-12">
+					<hr class="light">
+					<h5>&copy; Hawassa Land Management</h5>
+				</div>
+			</div>
+
+	</div>
+</footer>
+
+</body>
+</html>

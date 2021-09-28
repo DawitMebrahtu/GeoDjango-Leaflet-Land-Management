@@ -1,0 +1,83 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"> 
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+ 	<div class="container-fluid">
+ 		 
+ 		<div class="collapse navbar-collapse" id="navbarResponsive">
+ 			
+ 		</div>
+    </div>
+	</nav>
+
+	<div >
+		
+		<div class="col-12"> 
+			<hr>
+			<h2> Laws and Regulations </h2>
+			<hr>
+		</div>
+		<div>
+			
+			
+			<div class="col-md-10">
+			<p>The BLM manages public lands and subsurface estate under its jurisdiction under the Federal Land Policy and Management Act or FLPMA, passed in 1976. Despite the rapidly changing environment in which we work, the BLM remains committed to its core mission mandated by FLPMA – a careful balancing of multiple use and sustained yield.</p>
+			</div>	
+		</div>
+	</div>
+
+
+
+<footer>
+	<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-4">
+						<hr class="light">
+						<h5>About Hawassa</h5>
+						<hr class="light">
+						<p><a href="{% url 'backgroundinfo' %}" class= "nav-link">Background Info</a></p>
+						<p><a href="{% url 'physicalchar' %}" class= "nav-link">Physical Characterstics</a></p>
+						<p><a href="{% url 'socialchar' %}" class= "nav-link">Socio-economic Characterstics</a></p>
+						<p><a href="{% url 'vision' %}" class= "nav-link">Vision</a><br></p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Legal</h5>
+					<hr class="light">
+					<p><a href="{% url 'regulations' %}" class="btn disabled nav-link" >Laws and Regulations</a></p>
+					<p><a href="{% url 'disclaimer' %}"class= "nav-link" >Disclaimer</a></p>
+					
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Policies</h5>
+					<hr class="light">
+					<p><a href="{% url 'privacy' %}"class= "nav-link">Privacy Policy</a></p>
+					<p><a href="{% url 'accessibility' %}" class= "nav-link">Accessibility</a></p>
+					
+				</div>
+				<div class="col-12">
+					<hr class="light">
+					<h5>&copy; Hawassa Land Management</h5>
+				</div>
+			</div>
+
+	</div>
+</footer>
+
+</body>
+</html>

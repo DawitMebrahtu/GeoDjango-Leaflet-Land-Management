@@ -1,0 +1,119 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"> 
+	<style>
+#residential-owners {
+  background-color: #ebeff5;
+}
+
+#corporate-owners{
+  background-color: #ebeff5;
+}
+
+	</style>
+</head>
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+ 	<div class="container-fluid">
+ 		 <img src="{% static 'images/hawassalogo.jpg' %}">
+ 		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+ 			<span class="navbar-toggler-icon"></span>
+ 		</button> 
+ 		<div class="collapse navbar-collapse" id="navbarResponsive">
+ 			<ul class= "navbar-nav ml-auto">
+ 				<li class="nav-item">
+ 					<a class= "nav-link" href="{% url 'archive' %}">Home</a>
+ 				</li>
+ 				
+ 			</ul>
+ 		</div>
+    </div>
+</nav>
+
+
+<!-- body -->
+
+<div class="row">
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center  mb-3" id="residential-owners">
+				<div class="card-header">
+					<h5 class="card-title">Residential Land Owners </h5>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">{{resident}}</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center  mb-3" id="corporate-owners">
+				<div class="card-header">
+					<h5 class="card-title">Corporate Land Owners </h5>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">{{corporate}}</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+</div>
+
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-7">
+		<h5>Latest Users</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary btn-sm btn-block" href=""> Register/ed Land Owners</a>
+			<table class="table table-sm">
+				<tr>
+					
+					<th>Owner</th>
+					<th>Email</th>
+				
+				</tr>
+				
+				{% block content1 %}
+				{% for i in land_owners %}
+					<tr>
+						<td>{{i.name}}</td>
+						<td>{{i.email}}</td>
+						<td><a class="btn btn-outline-info  btn-sm btn-block" href="{% url 'archive_owner_info' i.id %}">More Info</a></td>
+					</tr>	
+
+				{% endfor %}
+				{% endblock content1 %}
+			</table> 
+		</div>
+	</div>
+</div>
+
+<!-- Search Div -->
+
+
+</body>
+</html>
+

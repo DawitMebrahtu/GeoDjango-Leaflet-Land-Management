@@ -1,0 +1,98 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"> 
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+ 	<div class="container-fluid">
+ 		<a class="navbar-brand " href="#"><img src="img/hawassalogo.jpg"></a>
+ 		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+ 			<span class="navbar-toggler-icon"></span>
+ 		</button> 
+ 		<div class="collapse navbar-collapse" id="navbarResponsive">
+ 			
+ 			
+ 		</div>
+    </div>
+	</nav>
+
+	<div >
+		
+		<div class="col-12"> 
+			<hr>
+			<h2> Physical Characterstics </h2>
+			<hr>
+		</div>
+		<div>
+			
+			
+			<div class="col-md-10">
+				
+
+				<p>Hawassa town is situated in Hawassa sub-basin drainage system, having seasonal and perennial rivers such as Tukur Wuha that collects water from the nearby high land areas and eventually drain it to Lake Hawassa.  Except in the eastern and southern periphery areas and very flat /lower part of the town, the flow pattern of run-offs is towards Lake Hawassa.  The altitude of the town is 1690 meter above sea level; Mean Annual Temperature is 20ºC; Mean Annual Rainfall is 789 mm.</p>
+
+
+				
+
+				<p>
+					There are a number of tourist attraction sites that include Amora Gedel park; Tikurwuha  park (with natural forest); Hawassa lake; Tabor hills; Burkitu hot spring water (which lies between Hawassa & Yirgalem); Almura hills; Loke natural forest; Wendo Genet park (founded  in 1969); and Gidabo Hot Spring which is located 41 km far south of Hawassa town.  Lake Hawassa is the main tourist attraction in the town as well as in the region.  Boating on Lake Hawassa with the spectacular and breath taking view of the sunset is a moment of tranquility.  The great open-air market at the heart of the town, its multi ethnic residents with their various hair dressing styles, cultural dresses and their mixed way of life attract tourists
+		 
+
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+
+<footer>
+	<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-4">
+						<hr class="light">
+						<h5>About Hawassa</h5>
+						<hr class="light">
+						<p><a href="{% url 'backgroundinfo' %}" class= "nav-link">Background Info</a></p>
+						<p><a href="{% url 'physicalchar' %}" class="btn disabled nav-link">Physical Characterstics</a></p>
+						<p><a href="{% url 'socialchar' %}"class= "nav-link">Socio-economic Characterstics</a></p>
+						<p><a href="{% url 'vision' %}"class= "nav-link">Vision</a><br></p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Legal</h5>
+					<hr class="light">
+					<p><a href="{% url 'regulations' %}"class= "nav-link" >Laws and Regulations</a></p>
+					<p><a href="{% url 'disclaimer' %}" class= "nav-link">Disclaimer</a></p>
+					
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Policies</h5>
+					<hr class="light">
+					<p><a href="% url 'privacy' %}"class= "nav-link">Privacy Policy</a></p>
+					<p><a href="{% url 'accessibility' %}"class= "nav-link" >Accessibility</a></p>
+					
+				</div>
+				<div class="col-12">
+					<hr class="light">
+					<h5>&copy; Hawassa Land Management</h5>
+				</div>
+			</div>
+
+	</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"> 
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+ 	<div class="container-fluid">
+ 		
+ 		<div class="collapse navbar-collapse" id="navbarResponsive">
+ 			<ul class= "navbar-nav ml-auto">
+ 				<li class="nav-item">
+ 					<a class= "nav-link" href="#">Home</a>
+ 				</li>
+ 				
+ 				
+ 			</ul>
+ 		</div>
+    </div>
+	</nav>
+
+	<div >
+		
+		<div class="col-12"> 
+			<hr>
+			<h2> Accessibility </h2>
+			<hr>
+		</div>
+		<div>
+			
+			
+			<div class="col-md-10">
+			<p><h4>  Navigation</h4> </p>
+<p>It is recommended that you use the navigation bar provided on the top to move around this site. The navigation gives you access to all the sections and subsections that are available from the home page.
+</p>
+ 
+
+<p><h4>External Links</h4></p>
+<p>We provide many links to external websites. These links are provided for your convenience and do not in any way constitute an endorsement of the software or companies, as noted in our disclaimer. Before leaving our site for one that is not in the .gov domain, you will be given an alert.</p>
+
+ 
+
+<p><h4>Documents and Forms</h4></p>
+<p>Often a document or form is posted on a page in multiple formats, such as HTML, Word, PDF, RTF, or Excel. If you require a document in a different file format than we currently provide, you can request it from us and we will try to accommodate you. Free viewers are also available for many of the file types used.</p>
+			</div>	
+		</div>
+	</div>
+
+
+
+<footer>
+	<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-4">
+						<hr class="light">
+						<h5>About Hawassa</h5>
+						<hr class="light">
+						<p><a href="{% url 'backgroundinfo' %}"  class= "nav-link">Background Info</a></p>
+						<p><a href="{% url 'physicalchar' %}" class= "nav-link">Physical Characterstics</a></p>
+						<p><a href="{% url 'socialchar' %}" class= "nav-link">Socio-economic Characterstics</a></p>
+						<p><a href="{% url 'vision' %}" class= "nav-link">Vision</a><br></p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Legal</h5>
+					<hr class="light">
+					<p><a href="{% url 'regulations' %}" class= "nav-link">Laws and Regulations</a></p>
+					<p><a href="{% url 'disclaimer' %}" class= "nav-link">Disclaimer</a></p>
+					
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Policies</h5>
+					<hr class="light">
+					<p><a href="% url 'privacy' %}" class= "nav-link">Privacy Policy</a></p>
+					<p><a href="{% url 'accessibility' %}" class="btn disabled nav-link">Accessibility</a></p>
+				</div>
+				<div class="col-12">
+					<hr class="light">
+					<h5>&copy; Hawassa Land Management</h5>
+				</div>
+			</div>
+
+	</div>
+</footer>
+
+</body>
+</html>

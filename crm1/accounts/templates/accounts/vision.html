@@ -1,0 +1,91 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"> 
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+ 	<div class="container-fluid">
+ 		 
+ 		<div class="collapse navbar-collapse" id="navbarResponsive">
+ 			
+ 		</div>
+    </div>
+	</nav>
+
+	<div >
+		
+		<div class="col-12"> 
+			<hr>
+			<h2> Vision and Mission </h2>
+			<hr>
+		</div>
+		<div>
+			
+			
+			<div class="col-md-10">
+				<p><h4> Hawassa Urban Land Development and Housing</h4></p>
+
+				<p>The Ministry of Urban Development and Housing is re-established on October 6, 2015 following the issuance of proclamation No. 916/2015 of the Negarit Gazetha that defined the powers and duties of the Executive organs of the Federal Democratic Republic of Ethiopia and is an institution working mainly focusing on urban development and housing sector
+				<p>Realizing the development of complimentary, prosperous and internationally competitive urban centers, which are centers of development, models of democracy,  generate development and deliver efficient services to their inhabitants and ensure their livability through plan led development </p>
+
+
+				<p><h5>Mission</h5></p>
+
+				<p>To make residents beneficiaries by making urban centers to become development and good governance centers by supplying standardized services through integration and coordination of customers and stakeholders.</p>
+			</div>
+		</div>
+	</div>
+
+
+
+<footer>
+	<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-4">
+						<hr class="light">
+						<h5>About Hawassa</h5>
+						<hr class="light">
+						<p><a href="{% url 'backgroundinfo' %}" class= "nav-link">Background Info</a></p>
+						<p><a href="{% url 'physicalchar' %}" class= "nav-link">Physical Characterstics</a></p>
+						<p><a href="{% url 'socialchar' %}" class= "nav-link">Socio-economic Characterstics</a></p>
+						<p><a href="{% url 'vision' %}" class="btn disabled">Vision</a><br></p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Legal</h5>
+					<hr class="light">
+					<p><a href="{% url 'regulations' %}" class= "nav-link">Laws and Regulations</a></p>
+					<p><a href="{% url 'disclaimer' %}" class= "nav-link">Disclaimer</a></p>
+					
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Policies</h5>
+					<hr class="light">
+					<p><a href="% url 'privacy' %}" class= "nav-link">Privacy Policy</a></p>
+					<p><a href="{% url 'accessibility' %}" class= "nav-link">Accessibility</a></p>
+					
+				</div>
+				<div class="col-12">
+					<hr class="light">
+					<h5>&copy; Hawassa Land Management</h5>
+				</div>
+			</div>
+
+	</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+
+
+
+{% load static %}
+
+<!DOCTYPE html>
+
+{% load geojson_tags %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	
+	<style>
+		#hawassa {
+			width: 1200px;
+			height: 600px;
+		}
+		.prepared_map_style{
+			background-color: white;
+		}
+		.map_container{
+			border: 2px solid black;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/leaflet.css' %}">
+	<script type="text/javascript" src="{% static 'js/leaflet.js' %}"></script>
+</head>
+<body id="prepared_map_style" style="background-color: white; " >
+
+ 	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+ 	<div class="container-fluid">	
+ 		<div class="collapse navbar-collapse" id="navbarResponsive">
+ 			<ul class= "navbar-nav ml-auto">
+ 				<li class="nav-item">
+ 					<a class= "nav-link "href="{% url 'owner_page'  %}">Home</a>
+ 				</li> 				
+ 			</ul>
+ 		</div>
+    </div>
+	</nav>
+	
+	
+
+
+<div style="border: 2px solid black;">
+<div class="row"><h5 style="padding-left: 520px; padding-top: 40px; padding-bottom: 10px;">Right Holder Description</h5></div>
+<div class="row"> 
+	<div class="col-md-1"></div>
+	<div style="padding: 50px 20px 20px 20px;">
+		<h6>Right Holder Name: <span style="color: brown">{{his_name}}</span></h6>
+	</div>
+</div>
+<hr>
+<div class="row"><h5 style="padding-left: 520px; padding-top: 30px; padding-bottom: 30px;">Parcel Description</h5></div>
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-5" id="map_container" >
+		<div  id="map" style="width: 300px; height: 300px; border: 4px solid black; background-color: white;"></div>
+	</div>
+	<div class="col-md-4" style="width: 50px;">
+		<h5 class="col-md-4" style="padding-left: 90px;">Coordinates</h5>
+		<hr>
+		<table class="col-md-4"><th><h6 style="padding-left: 70px;">X </h6></th><th><h6 style="padding-left: 130px;">Y </h6></th></table>
+		<h6 style="color: brown;">{{his_coordinates}}</h6>
+		<hr>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6"></div>
+	<div class="col-md-6">
+			{% block content1 %}	
+			<div class="row">
+			<h6>Documented Area of Parcel    : </h6><h6 style="color: brown;"> {{his_area}}</h6>
+			</div>
+			
+	</div>
+</div>	
+	{% endblock content1 %}
+<hr>
+	<h5 style="padding-left: 520px; padding-top: 30px; padding-bottom: 10px;">Rights Description</h5>
+<div class="row">
+	<div class="col-sm-2"></div>
+	<div class="col-md-8">
+		<p>1. In accordance with Article33 (1) of urban Landholding proclamation No. 818/2006, it is hereby confirmed all these Rights, Responsibilities, Registers provided at the register of the agency under the name of the land use right holder/holders are correct</p>
+		<p>2. Any omissions, additions or forgery of information on this certificate is legally forbidden.</p>
+	</div>
+
+</div>
+</div>
+	<script type="text/javascript">
+
+		var map = L.map('map',{zoomControl: false}).setView([7.0504, 38.4955], 13);
+     		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
+     	map.scrollWheelZoom.disable();
+     	map.doubleClickZoom.disable();
+     	map.dragging.disable();
+     	var polygs=	L.geoJson({{ his_land|geojsonfeature|safe}});
+     	polygs.addTo(map);
+     	map.fitBounds(polygs.getBounds());
+     	polygs.setStyle({
+     		color:'black',
+
+     	});
+		polygs.bindPopup(feature.geometry.coordinates)
+		//let my_coordinates: FeatureCollection<MultiPolygon>;
+		//var my_coordinates= polygs.getLatLngs();
+	</script>
+	<div>
+		<h3>
+			<script type="text/javascript">
+				//document.write(my_coordinates)
+			</script>
+		</h3>
+	</div>
+</body>
+</html>

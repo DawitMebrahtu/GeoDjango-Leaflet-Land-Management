@@ -1,0 +1,75 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"> 
+	<style>
+#residential-owners {
+  background-color: #ebeff5;
+}
+
+#corporate-owners{
+  background-color: #ebeff5;
+}
+
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+ 	<div class="container-fluid">
+ 		 <img src="{% static 'images/hawassalogo.jpg' %}">
+ 		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+ 			<span class="navbar-toggler-icon"></span>
+ 		</button> 
+ 		<div class="collapse navbar-collapse" id="navbarResponsive">
+ 			<ul class= "navbar-nav ml-auto">
+ 				<li class="nav-item">
+ 					<a class= "nav-link" href="{% url 'archive' %}">Home</a>
+ 				</li>
+ 				
+ 			</ul>
+ 		</div>
+    </div>
+</nav>
+
+<div class="row">
+	<div class="col-md-9" style="padding-left: 300px;">
+		<h5 class="text-center">Land list</h5>
+		<hr>
+		<div  class="card card-body">
+			<a class="btn btn-primary btn-sm btn-block" href=""> Land list</a>
+			<table class="table table-sm">
+				<tr>		
+					<th>Address</th>
+					<th>Owners</th>
+				</tr>
+
+				{% block content %}
+				{% for i in all_lands %}
+					<tr>
+						<td><a href="{% url 'land_list_map' i.id %}">{{i.name}}</a></td>
+						<td>{{i.owner}}</td>
+						
+					</tr>	
+
+				{% endfor %}
+				{% endblock content %}
+			</table> 
+		</div>
+	</div>
+</div>
+
+
+</body>
